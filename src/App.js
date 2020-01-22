@@ -4,7 +4,7 @@ import React from "react";
 // Styles
 import "./App.css";
 
-// Componentsadsgfgagadg
+// Components
 import Messages from "./components/Messages";
 import Input from "./components/Input";
 
