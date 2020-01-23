@@ -7,6 +7,7 @@ import "./App.css";
 // Components
 import Messages from "./components/Messages";
 import Input from "./components/Input";
+import { resetWarningCache } from "prop-types";
 
 class App extends React.Component {
   state = {
@@ -19,14 +20,16 @@ class App extends React.Component {
     messages.push(obj);
 
     this.setState({
-      messages:messages
+      messages: this.state.messages
     });
   };
+  
+ 
 
   render() {
     return (
       <div className="App container">
-        <Messages />
+        <Messages arraOfMessage ={this.state.messages} />
         <Input parentMsgToState={this.messageToState} dummy="dummy" />
       </div>
     );

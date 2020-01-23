@@ -3,13 +3,14 @@ import React from "react";
 
 import Message from "./Message";
 
-function Messages() {
+function Messages(props) {
   return (
     <div>
-      Messages:
-      <Message />
+    {props.arraOfMessage.map(m =>  <Message  nameOfUser={m.name} messageOfUser={m.msg}/>)}
+     
     </div>
   );
 }
 
 export default Messages;
+    

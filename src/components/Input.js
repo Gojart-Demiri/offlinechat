@@ -23,6 +23,7 @@ class Input extends React.Component {
     });
   };
 
+  
   handleSubmit = event => {
     event.preventDefault();
 
@@ -30,11 +31,17 @@ class Input extends React.Component {
       name: this.state.inputName,
       msg: this.state.inputMessage
     };
+    this.setState({
+      inputName: "",
+      inputMessage: ""
+    })
+
 
     console.log("obj", obj);
 
     this.props.parentMsgToState(obj);
   };
+  
 
   render() {
     console.log(this.props.dummy);
